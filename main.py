@@ -2,11 +2,11 @@ import pyowm
 from pyowm.utils.config import get_default_config
 import telebot
 
-bot = telebot.TeleBot('2060133799:AAHP0fOR0wN5Pi89oj6h48lFfz2zbGFNUUo')
+bot = telebot.TeleBot('token')
 
 config_dict = get_default_config()
 config_dict['language'] = 'ru'
-owm = pyowm.OWM('b58fbcb1deb95f901204c32fddc7f04b', config_dict)
+owm = pyowm.OWM('token', config_dict)
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
